@@ -1,0 +1,44 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+<br>
+<h1>Mostrar la información de un texto</h1>
+
+
+<form action = "" method="post">
+    <table>
+        {{forma.as_table}}
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Consultar"></td>
+        </tr>
+    </table>
+    {% csrf_token %}    
+</form>
+
+
+{%if submitted %}
+
+        <p>
+                {{texto.titulo}}
+        </p>
+
+
+            {% for oracion in texto.getOraciones %}
+                <p>
+                    {{oracion.oracion}}
+
+                    <p>
+                    {% for p in oracion.getPalabras %}
+                        [{{p.lemma}}, {{p.token}}, {{p.categoria}}]
+                    {%endfor%}
+                    </p>
+
+                </p>
+
+            {%endfor%}
+
+
+{%endif%}
+
+{% endblock %}

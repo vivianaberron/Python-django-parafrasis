@@ -1,0 +1,62 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+<br>
+<h1>Buscar un término</h1>
+
+
+<form action = "" method="post">
+    <table>
+        {{buscar_termino_form.as_table}}
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Consultar"></td>
+        </tr>
+    </table>
+    {% csrf_token %}    
+</form>
+
+
+{%if submitted %}
+    {%if num_terminos == 0 %}
+        <p>Aun no hay términos en la base de datos</p>
+    {%else%}
+
+        <p>
+            <h1>Hay {{num_terminos}} terminos registrados y {{num_terminos_comienzan}} 
+                {%if parcial %}
+                <i>contienen</i> "{{termino_buscado}}"
+                {%else%}
+                <i>comienzan con</i>"{{termino_buscado}}"
+                {%endif%}
+            </h1>
+        </p>
+        
+        <p><h1>Términos</h1>
+            {%for t in terminos%}
+                <p><h2>{{t.termino}}</h2></p>
+                    <p>
+                        <ul>
+                        {%for p in t.getPatrones%}
+                            <p><li>{{p.patron}}</li></p>
+                        {%endfor%}
+                        </ul>
+                    </p>
+                    <p>
+                        <ul>
+                        {%for c in t.getContextos%}
+                            <p><li>"<i>{{c.getCommentedContexto | safe}}</i>"</li></p>
+                        {%endfor%}
+                        </ul>
+                    </p>
+
+            {%endfor%}
+        </p>
+
+
+
+
+    {%endif%}
+{%endif%}
+
+{% endblock %}

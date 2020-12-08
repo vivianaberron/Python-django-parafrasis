@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+
+  <body>
+    {% block sidebar %}
+    {%endblock%}
+    
+    {% block navbar %}
+    {% endblock %}
+
+    {% block content %}<!--- CONTENIDO DE CADA PÁGINA --> 
+    {% endblock %}
+
+    {% block footer %} 
+    {% endblock %} 
+  
+    {% block copyright %}
+    {% endblock %} 
+
+</body>
+
+</html>

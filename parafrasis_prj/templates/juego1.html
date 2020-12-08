@@ -1,0 +1,66 @@
+{% extends "base_general.html" %}
+{%block content%}
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<br>
+<h1 id="hola">Juego no. 1</h1>
+
+{%if tema%}
+<p>Tema: {{tema}}</p>
+{%endif%}
+
+<p>
+{%if nivel%}
+Nivel {{nivel}}
+{%endif%}
+</p>
+
+<p>
+
+{%for p in palabras%}
+    ({{p}})
+{%endfor%}
+
+</p>
+
+<p>
+{%for p in prueba%}
+    ({{p}})
+{%endfor%}
+
+{%for n in nivel2%}
+    <p>
+    {%for nn in n%}
+        ({{nn}})
+    {%endfor%}
+    </p>
+{%endfor%}
+
+
+
+</p>
+
+<form action = "" method="post">
+    <table>
+        {{forma.as_table}}
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Jugar"></td>
+        </tr>
+    </table>
+    {% csrf_token %}    
+</form>
+
+
+
+{%if submitted %}
+
+            <p>{{texto_jugador}}</p>
+
+
+{%endif%}
+
+{% endblock %}
