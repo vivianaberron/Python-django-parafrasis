@@ -1,10 +1,289 @@
-#hola {
-    color: red;
-  
-}
 body {
     width: 100%;
-    height: 100%; 
-    background-color: aqua;
+    height: 100%;
+  background-color: #faba70;
+    
 }
 
+h1 {
+    display: flex;
+    font-size: 4.5rem;
+    margin-left: 40%;
+    color: rgb(49, 49, 49);
+    margin-top: 10%;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+p {
+    font-size: 1.6rem;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-weight: 500;
+}
+form {
+    margin-left: 40%;
+    font-size: 2rem;
+    margin-top: 5%;
+    padding: 0;
+    width: 20%;
+    height: 10%;
+    border: 0.140rem;
+}
+
+form:hover {
+
+color: #5f4dee;
+}
+
+.btn-solid-reg {
+	display: inline-block;
+	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+	border: 0.125rem solid #ec8611;
+	border-radius: 2rem;
+	margin: 1.1rem;
+	background-color: #ec8611;
+	color: #fff;
+	font: 700 0.875rem/0 "Open Sans", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-reg:hover {
+	background-color: transparent;
+	color: #6d6c6c;
+	text-decoration: none;
+}
+
+.btn-solid-lg {
+	display: flex;
+	padding: 1.8rem 3.2rem 1.8rem 3.2rem;
+	border: 0.200rem solid #5f4dee;
+	border-radius: 2rem;
+	background-color: #5f4dee;
+	color: #fff;
+	font: 1.8rem/0 "Open Sans", sans-serif;
+	text-decoration: none;
+    transition: all 0.2s;
+    margin: 0 auto;
+    margin-left: -15%;
+    margin-top: 20%;
+}
+
+.btn-solid-lg:hover {
+	background-color: transparent;
+	color: #5f4dee;
+	text-decoration: none;
+}
+
+.btn-outline-reg {
+	display: inline-block;
+	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+	border: 0.125rem solid #5f4dee;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #5f4dee;
+	font: 700 0.875rem/0 "Open Sans", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-reg:hover {
+	background-color: #5f4dee;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-outline-lg {
+	display: inline-block;
+	padding: 1.375rem 2.625rem 1.375rem 2.625rem;
+	border: 0.125rem solid #5f4dee;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #5f4dee;
+	font: 700 0.875rem/0 "Open Sans", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-lg:hover {
+	background-color: #5f4dee;
+	color: #fff;
+	text-decoration: none;
+}
+
+.btn-outline-sm {
+	display: inline-block;
+	padding: 0.875rem 1.5rem 0.875rem 1.5rem;
+	border: 0.125rem solid #eea34d;
+	border-radius: 2rem;
+	background-color: transparent;
+	color: #eea34d;
+	font: 700 0.875rem/0 "Open Sans", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-sm:hover {
+	background-color: #eea34d;
+	color: #fff;
+	text-decoration: none;
+}
+
+label {
+    margin-left: -55%;
+}
+textarea {
+    width: 120%;
+    height: 11rem;
+    margin-left: -15%;
+    padding: 0;
+}
+
+#gracias {
+    margin-left: 40%;
+    font-size: 3rem;
+}
+
+.navbar-custom {
+	background-color: #f1b066;
+	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+	font: 700 0.875rem/0.875rem "Open Sans", sans-serif;
+	transition: all 0.2s;
+}
+
+.navbar-custom .container {
+	max-width: 87.5rem;
+}
+
+.navbar-custom .navbar-brand.logo-image img {
+    width: 4.4375rem;
+	height: 1.75rem;
+}
+
+.navbar-custom .navbar-brand.logo-text {
+	font: 700 2rem/1.5rem "Open Sans", sans-serif;
+	color: #fff;;
+	text-decoration: none;
+}
+
+.navbar-custom .navbar-nav {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.navbar-custom .nav-item .nav-link {
+	padding: 0.625rem 0.75rem 0.625rem 0.75rem;
+	color: #f7f5f5;
+	opacity: 0.8;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link.active {
+	color: rgb(228, 134, 11);
+	opacity: 1;
+}
+
+/* Dropdown Menu */
+.navbar-custom .dropdown:hover > .dropdown-menu {
+	display: block; /* this makes the dropdown menu stay open while hovering it */
+	min-width: auto;
+	animation: fadeDropdown 0.2s; /* required for the fade animation */
+}
+
+@keyframes fadeDropdown {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar-custom .dropdown-toggle:focus { /* removes dropdown outline on focus */
+	outline: 0;
+}
+
+.navbar-custom .dropdown-menu {
+	margin-top: 0;
+	border: none;
+	border-radius: 0.25rem;
+	background-color: #ee804d;
+}
+
+.navbar-custom .dropdown-item {
+	color: #f7f5f5;
+	opacity: 0.8;
+	font: 700 0.875rem/0.875rem "Open Sans", sans-serif;
+	text-decoration: none;
+}
+
+.navbar-custom .dropdown-item:hover {
+	background-color: #eea34d;
+	color: #fff;
+	opacity: 1;
+}
+
+.navbar-custom .dropdown-items-divide-hr {
+	width: 100%;
+	height: 1px;
+	margin: 0.75rem auto 0.725rem auto;
+	border: none;
+	background-color: #c4d8dc;
+	opacity: 0.2;
+}
+/* end of dropdown menu */
+
+.navbar-custom .nav-item .btn-outline-sm {
+	margin-top: 0.25rem;
+	margin-bottom: 1.375rem;
+	margin-left: 0.5rem;
+	border: 0.125rem solid #fff;
+	color: #fff;
+}
+
+.navbar-custom .nav-item .btn-outline-sm:hover {
+	background-color: #fff;
+	color: #ec8611;
+}
+
+.navbar-custom .navbar-toggler {
+	padding: 0;
+	border: none;
+	color: #fff;
+	font-size: 2rem;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+	display: inline-block;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+	display: inline-block;
+	margin-right: 0.125rem;
+}

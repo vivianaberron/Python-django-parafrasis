@@ -17,11 +17,11 @@ class Buscar_texto_form(forms.Form):
 
 class juego1_0_form(forms.Form):
     #texto = forms.CharField(max_length=30,label='Textow')
-    tema = forms.CharField(label='Tema del juego?', widget=forms.Select(choices=getOpciones()))    
+    tema = forms.CharField(label='Selecciona un tema', widget=forms.Select(choices=getOpciones()))    
 
 class juego1_1_form(forms.Form):
     #texto = forms.CharField(max_length=30,label='Textow')
-    texto_jugador = forms.CharField(widget=forms.Textarea)
+    texto_jugador = forms.CharField(label='Escribe un párrafo', widget=forms.Textarea)
     
 
 

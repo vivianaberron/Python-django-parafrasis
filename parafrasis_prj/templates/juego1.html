@@ -1,54 +1,71 @@
 {% extends "base_general.html" %}
 {%block content%}
 {% load static %}
-<html>
+<html lang="es-mx">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  
+
+    <!-- Website Title -->
+    <title> Paráfrasis </title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
-<br>
-<h1 id="hola">Juego no. 1</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+
+    </nav>
+<h1>¡Juguemos!</h1>
+
+<p> Ayúdanos a crear un corpus. Selecciona un tema y posteriormente escribe en el cuadro de texto un párrafo, utilizando las palabras que estén entre paréntesis. </p>
 
 {%if tema%}
-<p>Tema: {{tema}}</p>
+<h2 id="form-1">Tema: {{tema}}</h2>
 {%endif%}
 
-<p>
+<h2>
 {%if nivel%}
 Nivel {{nivel}}
 {%endif%}
-</p>
+</h2>
 
-<p>
+<h3>
 
 {%for p in palabras%}
     ({{p}})
 {%endfor%}
 
-</p>
+</h3>
 
-<p>
+<h3>
 {%for p in prueba%}
     ({{p}})
 {%endfor%}
 
 {%for n in nivel2%}
-    <p>
+    <h3>
     {%for nn in n%}
         ({{nn}})
     {%endfor%}
-    </p>
+    </h3>
 {%endfor%}
 
 
 
-</p>
+</h3>
 
 <form action = "" method="post">
     <table>
         {{forma.as_table}}
         <tr>
             <td>&nbsp;</td>
-            <td><input type="submit" value="Jugar"></td>
+            <td><input class="btn-solid-lg" type="submit" value="Enviar"></td>
         </tr>
     </table>
     {% csrf_token %}    
