@@ -19,11 +19,30 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                            <a class="nav-link page-scroll" href="https://vivianaberron.github.io/Parafrasis/"> HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="https://vivianaberron.github.io/Parafrasis/"> ACERCA DE </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="https://vivianaberron.github.io/Parafrasis/">PROYECTO Y PUBLICACIONES</a>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    
 
     </nav>
 <h1>¡Juguemos!</h1>
+<h4> Ayúdanos a crear un corpus. </h4>
 
-<p> Ayúdanos a crear un corpus. Selecciona un tema y posteriormente escribe en el cuadro de texto un párrafo, utilizando las palabras que estén entre paréntesis. </p>
+<p> Selecciona un tema y posteriormente escribe en el cuadro de texto un párrafo, utilizando las palabras que estén entre paréntesis. </p>
 
 {%if tema%}
 <h2 id="form-1">Tema: {{tema}}</h2>
